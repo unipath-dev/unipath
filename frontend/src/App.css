@@ -1,0 +1,553 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #182b25;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  min-height: 82px;
+  max-width: 1240px;
+  padding: 0 28px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-family: "Manrope", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.logo span,
+.hero h1 span {
+  color: #15966a;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 32px;
+  color: #64746c;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #15966a;
+}
+
+.nav-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #167d59;
+  color: white;
+  border-radius: 9px;
+  padding: 13px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: #106747;
+  transform: translateY(-2px);
+}
+
+.hero {
+  max-width: 1240px;
+  min-height: 510px;
+  margin: 0 auto;
+  padding: 70px 48px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  background: #f1f7f2;
+  border-radius: 24px;
+}
+
+.hero-content {
+  max-width: 590px;
+}
+
+.eyebrow {
+  color: #16835d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1,
+.section-heading h2,
+.about h2 {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -2px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1.15;
+  margin: 22px 0;
+  font-weight: 800;
+}
+
+.hero-content > p,
+.section-heading p,
+.about p {
+  color: #68766e;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-content > p {
+  max-width: 470px;
+  margin-bottom: 28px;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 26px;
+  font-size: 12px;
+  color: #65756b;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1da56e;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-circle {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: #dceee0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 24px rgba(255, 255, 255, 0.35);
+}
+
+.graduation-icon {
+  font-size: 110px;
+  filter: drop-shadow(0 12px 12px rgba(31, 75, 53, 0.12));
+}
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  background: white;
+  border: 1px solid #e8eee8;
+  border-radius: 13px;
+  padding: 17px 19px;
+  box-shadow: 0 12px 40px rgba(35, 70, 47, 0.09);
+}
+
+.floating-card span {
+  color: #718077;
+  font-size: 11px;
+}
+
+.floating-card strong {
+  font-size: 13px;
+}
+
+.scholarship-card {
+  top: 22px;
+  right: 0;
+}
+
+.future-card {
+  bottom: 22px;
+  left: 0;
+}
+
+.universities {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 100px 28px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.section-heading h2,
+.about h2 {
+  font-size: clamp(28px, 3vw, 39px);
+  margin: 12px 0 5px;
+}
+
+.section-heading p {
+  margin: 0;
+}
+
+.university-count {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 4px;
+}
+
+.university-count strong {
+  font-size: 25px;
+}
+
+.university-count span {
+  color: #77847b;
+  font-size: 12px;
+}
+
+.search-box {
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0;
+  padding: 0 16px;
+  min-height: 52px;
+  border: 1px solid #dfe7e0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.search-box > span {
+  font-size: 25px;
+  color: #74867a;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #182b25;
+  font-size: 13px;
+}
+
+.university-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.university-card {
+  border: 1px solid #e4eae4;
+  border-radius: 15px;
+  padding: 23px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.university-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(30, 60, 40, 0.07);
+}
+
+.university-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: #eff6ef;
+  border-radius: 12px;
+  font-size: 24px;
+  margin-bottom: 19px;
+}
+
+.program-tag {
+  display: inline-block;
+  color: #187d59;
+  background: #eaf5ed;
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.university-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 14px 0 8px;
+}
+
+.location {
+  color: #78847c;
+  font-size: 12px;
+}
+
+.card-divider {
+  height: 1px;
+  background: #e9eee9;
+  margin: 22px 0;
+}
+
+.cost-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 14px 0;
+  font-size: 11px;
+}
+
+.cost-row span {
+  color: #78847c;
+}
+
+.cost-row strong {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.scholarship-row strong {
+  color: #16835d;
+}
+
+.estimate-note {
+  color: #8a948d;
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #68766e;
+}
+
+.about {
+  max-width: 1160px;
+  margin: 0 auto 70px;
+  padding: 65px 30px;
+  background: #f5f8f4;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-top: 15px;
+}
+
+.about p {
+  max-width: 580px;
+  margin: 12px auto 0;
+}
+
+footer {
+  min-height: 100px;
+  max-width: 1160px;
+  margin: auto;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #e8ece8;
+}
+
+footer p,
+footer > span {
+  color: #7a867e;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    margin: 0 16px;
+    padding: 55px 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .university-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scholarship-card {
+    right: 5%;
+  }
+
+  .future-card {
+    left: 5%;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    min-height: 72px;
+    padding: 0 18px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 42px 22px 25px;
+    border-radius: 17px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+    letter-spacing: -1.7px;
+  }
+
+  .hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-visual {
+    min-height: 255px;
+  }
+
+  .visual-circle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .graduation-icon {
+    font-size: 80px;
+  }
+
+  .floating-card {
+    padding: 12px;
+    max-width: 190px;
+  }
+
+  .floating-card strong {
+    font-size: 11px;
+  }
+
+  .scholarship-card {
+    top: 4px;
+    right: -5px;
+  }
+
+  .future-card {
+    bottom: 4px;
+    left: -5px;
+  }
+
+  .universities {
+    padding: 70px 18px;
+  }
+
+  .section-heading {
+    align-items: start;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  .university-count {
+    padding-top: 25px;
+  }
+
+  .university-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .search-box {
+    margin: 25px 0;
+  }
+
+  .about {
+    margin: 0 16px 40px;
+    padding: 45px 20px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  footer {
+    padding: 25px 18px;
+    flex-wrap: wrap;
+  }
+
+  footer p {
+    display: none;
+  }
+}
