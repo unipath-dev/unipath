@@ -2,8 +2,6 @@
 const { Pool } = require("pg");
 require("dotenv").config();
 
-const isProduction = process.env.NODE_ENV === "production";
-
 const pool = new Pool({
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT || 5432),
@@ -11,9 +9,10 @@ const pool = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
 
-  ssl: isProduction
-    ? { rejectUnauthorized: false }
-    : undefined,
+  // Neon uchun SSL doim yoqilgan
+  ssl: {
+    rejectUnauthorized: false,
+  },
 
   connectionTimeoutMillis: 10000,
 });
