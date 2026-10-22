@@ -1,19 +1,22 @@
 
+import { Link, NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <header className="navbar">
-      <a className="logo" href="#">
+      <Link className="logo" to="/">
         Uni<span>Path</span>
-      </a>
+      </Link>
 
       <nav>
-        <a href="#universities">Universities</a>
-        <a href="#about">About</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/universities">Universities</NavLink>
+        <Link to="/#about">About</Link>
       </nav>
 
-      <a className="nav-button" href="#universities">
+      <Link className="nav-button" to="/universities">
         Explore universities
-      </a>
+      </Link>
     </header>
   );
 }

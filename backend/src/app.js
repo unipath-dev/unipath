@@ -1,6 +1,8 @@
 
 const express = require("express");
 const cors = require("cors");
+const universityRoutes = require("./routes/universityRoutes");
+const rankingRoutes = require("./routes/rankingRoutes");
 
 const app = express();
 
@@ -25,5 +27,8 @@ app.get("/api/health", (req, res) => {
     message: "UniPath API is running",
   });
 });
+
+app.use("/api/universities", universityRoutes);
+app.use("/api/rankings", rankingRoutes);
 
 module.exports = app;

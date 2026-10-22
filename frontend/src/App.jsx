@@ -1,80 +1,39 @@
 
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import UniversityCard from "./components/UniversityCard";
-import { universities } from "./data/universities";
+import Universities from "./pages/Universities";
 import "./App.css";
 
-function App() {
-  const [search, setSearch] = useState("");
+function Home() {
+  return (
+    <main>
+      <Hero />
 
-  const filteredUniversities = universities.filter((university) =>
-    `${university.name} ${university.location} ${university.program}`
-      .toLowerCase()
-      .includes(search.toLowerCase())
+      <section className="about" id="about">
+        <span className="eyebrow">OUR MISSION</span>
+        <h2>Make your next step a smarter one.</h2>
+        <p>
+          UniPath is a student-focused project designed to make
+          university research and scholarship planning easier.
+        </p>
+      </section>
+    </main>
   );
+}
 
+function App() {
   return (
     <div className="app">
       <Navbar />
 
-      <main>
-        <Hero />
-
-        <section className="universities" id="universities">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">EXPLORE YOUR OPTIONS</span>
-              <h2>Find your perfect fit</h2>
-              <p>Discover universities that match your goals.</p>
-            </div>
-
-            <div className="university-count">
-              <strong>{filteredUniversities.length}</strong>
-              <span>universities</span>
-            </div>
-          </div>
-
-          <div className="search-box">
-            <span>⌕</span>
-            <input
-              type="search"
-              placeholder="Search university, location, or major..."
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              aria-label="Search universities"
-            />
-          </div>
-
-          <div className="university-grid">
-            {filteredUniversities.map((university) => (
-              <UniversityCard
-                key={university.id}
-                university={university}
-              />
-            ))}
-          </div>
-
-          {filteredUniversities.length === 0 && (
-            <p className="empty-state">
-              No universities found. Try another search.
-            </p>
-          )}
-        </section>
-
-        <section className="about" id="about">
-          <span className="eyebrow">OUR MISSION</span>
-          <h2>Make your next step a smarter one.</h2>
-          <p>
-            UniPath is a student-focused project designed to make
-            university research and scholarship planning easier.
-          </p>
-        </section>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/universities" element={<Universities />} />
+      </Routes>
 
       <footer>
-        <a className="logo" href="#">
+        <a className="logo" href="/">
           Uni<span>Path</span>
         </a>
         <p>Explore opportunities. Plan your future.</p>

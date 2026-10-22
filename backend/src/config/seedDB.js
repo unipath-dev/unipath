@@ -39,7 +39,7 @@ async function seedDatabase() {
           (name, city, state, country, program, annual_tuition,
            scholarship_amount, official_url)
          VALUES ($1, $2, $3, 'United States', $4, $5, $6, $7)
-         ON CONFLICT DO NOTHING`,
+        ON CONFLICT (name, city, state, program) DO NOTHING`,
         [
           university.name,
           university.city,

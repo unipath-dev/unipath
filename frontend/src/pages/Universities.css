@@ -1,0 +1,221 @@
+
+.universities-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+  color: #172b27;
+}
+
+.universities-hero {
+  margin-bottom: 36px;
+}
+
+.universities-hero .eyebrow {
+  color: #168365;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.universities-hero h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.universities-hero p {
+  max-width: 620px;
+  color: #687873;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.universities-toolbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.universities-toolbar input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 17px;
+  border: 1px solid #dce5e1;
+  border-radius: 12px;
+  background: #fff;
+  color: #172b27;
+  font: inherit;
+  outline: none;
+}
+
+.universities-toolbar input:focus {
+  border-color: #168365;
+  box-shadow: 0 0 0 3px rgb(22 131 101 / 10%);
+}
+
+.universities-results {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #687873;
+  font-size: 14px;
+}
+
+.rankings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ranking-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e1e9e5;
+  border-radius: 16px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ranking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgb(25 55 45 / 7%);
+}
+
+.ranking-card-top,
+.ranking-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ranking-position {
+  color: #168365;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ranking-score {
+  color: #687873;
+  font-size: 12px;
+}
+
+.ranking-card h2 {
+  margin: 22px 0 10px;
+  font-size: 19px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.ranking-country {
+  min-height: 24px;
+  color: #687873;
+  font-size: 14px;
+}
+
+.ranking-card-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #edf1ef;
+  color: #687873;
+  font-size: 12px;
+}
+
+.universities-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 38px;
+}
+
+.universities-pagination button {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #dce5e1;
+  border-radius: 10px;
+  background: #fff;
+  color: #263d35;
+  cursor: pointer;
+  font: inherit;
+}
+
+.universities-pagination button:hover:not(:disabled) {
+  border-color: #168365;
+  color: #168365;
+}
+
+.universities-pagination button.active {
+  border-color: #168365;
+  background: #168365;
+  color: #fff;
+}
+
+.universities-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.page-number-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.page-ellipsis {
+  color: #687873;
+}
+
+.universities-message,
+.universities-error {
+  padding: 28px 0;
+  color: #687873;
+}
+
+.universities-error {
+  color: #b42318;
+}
+
+@media (max-width: 850px) {
+  .rankings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .universities-page {
+    padding: 40px 16px 56px;
+  }
+
+  .universities-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .rankings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-card {
+    padding: 18px;
+  }
+
+  .universities-results {
+    font-size: 12px;
+  }
+
+  .universities-pagination {
+    gap: 5px;
+  }
+
+  .universities-pagination button {
+    min-width: 34px;
+    height: 36px;
+    padding: 0 7px;
+  }
+}
