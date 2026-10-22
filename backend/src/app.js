@@ -6,11 +6,18 @@ const rankingRoutes = require("./routes/rankingRoutes");
 
 const app = express();
 
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://unipath-bi2c.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
   })
 );
+
 
 app.use(express.json());
 
