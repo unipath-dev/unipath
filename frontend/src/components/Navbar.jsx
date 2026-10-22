@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <Link className="logo" to="/">
-        Uni<span>Path</span>
+        Coll<span>Path</span>
       </Link>
 
       <nav>
